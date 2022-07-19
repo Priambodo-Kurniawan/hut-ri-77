@@ -9,7 +9,7 @@ function Modal({ idModal, data }) {
       <label htmlFor={idModal} className="modal cursor-pointer">
         <label
           htmlFor={idModal}
-          class="btn btn-sm btn-circle absolute right-2 top-2 bg-transparent text-gray-700 border-0 hover:text-white"
+          className="btn btn-sm btn-circle absolute right-2 top-2 bg-transparent text-gray-700 border-0 hover:text-white"
         >
           ✕
         </label>

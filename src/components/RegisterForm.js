@@ -31,7 +31,7 @@ function RegisterForm({ data }) {
           <span className="label-text">Wilayah</span>
         </label>
         <select id="wilayah" required className="select select-bordered w-full">
-          <option disabled selected>
+          <option disabled defaultValue>
             Pilih Wilayah
           </option>
           <option value="paseltan">Paseltan</option>
@@ -58,7 +58,6 @@ function RegisterForm({ data }) {
           className="input input-bordered w-full"
           value={data.nama}
           disabled
-          readonly
         />
       </div>
       {data.subKategori && (
@@ -71,7 +70,7 @@ function RegisterForm({ data }) {
             required
             className="select select-bordered w-full"
           >
-            <option disabled selected>
+            <option disabled defaultValue>
               Pilih Kategori
             </option>
             {data.subKategori &&

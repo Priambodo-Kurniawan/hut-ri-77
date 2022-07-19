@@ -15,10 +15,6 @@ function List({ title }) {
       .then((res) => res.json())
       .then((data) => {
         setData(data.data);
-        let detailParam = searchParams.get('detail');
-        if (detailParam) {
-          document.getElementById('detail').checked = true;
-        }
       })
       .finally((_) => {
         setIsloading(false);
@@ -33,10 +29,19 @@ function List({ title }) {
     }
   }, [searchParams, data]);
 
+  useEffect(() => {
+    if (!isLoading) {
+      let detailParam = searchParams.get('detail');
+      if (detailParam) {
+        document.getElementById('detail').checked = true;
+      }
+    }
+  }, [isLoading]);
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-96">
-        <button class="btn loading text-slate-400 bg-transparent border-0">
+        <button className="btn loading text-slate-400 bg-transparent border-0">
           loading
         </button>
       </div>
