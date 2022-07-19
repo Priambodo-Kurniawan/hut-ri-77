@@ -47,7 +47,7 @@ function List({ title }) {
     <div>
       <div className="mb-4 mb-4">
         <div className="flex items-center space-x-2 text-base">
-          <h4 className="font-semibold">Daftar Perlombaan</h4>
+          <h4 className="font-semibold ml-3">Daftar Perlombaan</h4>
           <span className="rounded-full bg-red-500 px-2 py-1 text-xs font-semibold text-slate-50">
             {data.length}
           </span>
