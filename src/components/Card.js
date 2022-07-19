@@ -19,23 +19,24 @@ function Card({ data }) {
         onClick={(e) => showModal(e, data)}
       >
         <div
-          className="card flex card-side card-compact shadow-xl mb-5 text-primary-content"
+          className="card flex card-side card-compact shadow-xl md:mb-5 text-primary-content"
           style={{ backgroundColor: 'white' }}
         >
-          <figure className="w-1/3 px-2 py-2">
+          <figure className="xl:w-1/3 w-2/5 px-2 py-2">
             {data.posterAcara && (
               <img
                 src={data.thumbnail || data.posterAcara}
                 alt="Movie"
                 className="rounded-xl"
+                style={{ height: '100%' }}
               />
             )}
           </figure>
-          <div className="w-2/3 card-body">
+          <div className="xl:w-2/3 w-3/5 card-body leading-3">
             <span className="text-red-400">
               {formatDate(data.tanggalMulai)}
             </span>
-            <h2 className="text-base font-bold leading-5 text-stone-700">
+            <h2 className="text-base font-bold leading-4 text-stone-700">
               {data.nama}
             </h2>
             <p className="text-gray-400">
