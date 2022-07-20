@@ -14,7 +14,7 @@ function Modal({ idModal, data }) {
           ✕
         </label>
         {data && (
-          <div className="modal-box" style={{ padding: 0 }}>
+          <label htmlFor="" className="modal-box" style={{ padding: 0 }}>
             {data?.posterAcara && <img src={data?.posterAcara} />}
             <div className="p-8">
               <div className="flex items-center justify-between">
@@ -89,7 +89,7 @@ function Modal({ idModal, data }) {
             <div className="p-8">
               <RegisterForm data={data} />
             </div>
-          </div>
+          </label>
         )}
       </label>
     </div>
