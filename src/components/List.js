@@ -59,7 +59,7 @@ function List({ title }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-x-8 gap-y-5 p-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 gap-x-8 gap-y-5 p-2">
         {data.map((el, idx) => (
           <Card data={el} key={idx} />
         ))}
