@@ -16,7 +16,7 @@ function Hero({ name }) {
           </div>
         </div>
       </div>
-      <div className="mb-8 mt-3">
+      <div className="mb-8 mt-3 p-3">
         <img
           src="https://i.ibb.co/S5SCnjx/Kemerdekaan-yang-memulihkan-Bangsa-Yesaya-27-1-13-1-1.png"
           className="rounded-lg drop-shadow-lg"
