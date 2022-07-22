@@ -1,17 +1,19 @@
 function Action({ data }) {
   const location = window.location.href;
 
-  console.log(window.location.href);
   const closeModal = function () {
     document.getElementById('detail').checked = false;
   };
 
   const linkWa = function () {
-    return (
+    let message =
       `https://wa.me/?text=` +
       data.deskripsi +
-      `\n\n ${data.shortLink || location}`
-    );
+      `\n\n ${data.shortLink || location}`;
+
+    message = message.replace(/\n/g, '%0a');
+    console.log(message);
+    return message;
   };
   return (
     <div>
