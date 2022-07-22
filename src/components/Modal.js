@@ -1,6 +1,7 @@
 import formatDate from '../helpers/date.js';
 import colorLabel from '../helpers/color.js';
 import RegisterForm from './RegisterForm.js';
+import Action from './Action.js';
 
 function Modal({ idModal, data }) {
   return (
@@ -85,6 +86,9 @@ function Modal({ idModal, data }) {
                   Daftar
                 </button>
               </div>
+            </div>
+            <div className="p-8">
+              <Action data={data} />
             </div>
             <div className="p-8">
               <RegisterForm data={data} />
