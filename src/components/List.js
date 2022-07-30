@@ -11,7 +11,7 @@ function List({ title }) {
   const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
-    fetch('https://hut-ri.glitch.me/events')
+    fetch('https://hut-ri2.glitch.me/events')
       .then((res) => res.json())
       .then((data) => {
         setData(data.data);

@@ -45,7 +45,7 @@ function RegisterForm({ data }) {
   const handleSubmit = function (e) {
     e.preventDefault();
     setIsloading(true);
-    fetch('https://hut-ri.glitch.me/participants', {
+    fetch('https://hut-ri2.glitch.me/participants', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
