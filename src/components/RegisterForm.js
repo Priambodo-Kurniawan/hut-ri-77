@@ -8,6 +8,7 @@ function RegisterForm({ data }) {
     lomba: data.nama,
     idLomba: data._id,
     subKategori: '',
+    isClosed: false,
   });
   const [isLoading, setIsloading] = useState(false);
   const [submited, setSubmited] = useState(false);
@@ -21,6 +22,7 @@ function RegisterForm({ data }) {
       lomba: data.nama,
       idLomba: data._id,
       subKategori: '',
+      isClosed: data.isCLosed || false,
     });
     setRegistered([]);
     setSubmited(false);
@@ -108,8 +110,9 @@ function RegisterForm({ data }) {
             value={dataParticipant.nama}
             onChange={handleOnChange}
             type="text"
-            placeholder="Type here"
+            placeholder={data.isClosed ? 'maaf kuota sudah penuh' : ''}
             className="input input-bordered w-full"
+            disabled={data.isClosed ? true : false}
             required
           />
         </div>
@@ -125,6 +128,7 @@ function RegisterForm({ data }) {
             type="tel"
             placeholder="Nomer telepon"
             className="input input-bordered w-full"
+            disabled={data.isClosed ? true : false}
             required
           />
         </div>
@@ -199,7 +203,7 @@ function RegisterForm({ data }) {
               'btn border-0 bg-red-500 text-white' +
               `${isLoading ? ' loading' : ''}`
             }
-            disabled={isLoading ? true : false}
+            disabled={isLoading || data.isClosed ? true : false}
             id="uploadBtn"
             name="uploadbtn"
           >
