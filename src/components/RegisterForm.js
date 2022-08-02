@@ -7,7 +7,7 @@ function RegisterForm({ data }) {
     wilayah: '',
     lomba: data.nama,
     idLomba: data._id,
-    subKategori: data.subKategori || '',
+    subKategori: '',
   });
   const [isLoading, setIsloading] = useState(false);
   const [submited, setSubmited] = useState(false);
@@ -20,7 +20,7 @@ function RegisterForm({ data }) {
       wilayah: '',
       lomba: data.nama,
       idLomba: data._id,
-      subKategori: data.subKategori || '',
+      subKategori: '',
     });
     setRegistered([]);
     setSubmited(false);
@@ -182,7 +182,7 @@ function RegisterForm({ data }) {
               required
               className="select select-bordered w-full"
             >
-              <option disabled defaultValue>
+              <option disabled defaultValue value="">
                 Pilih Kategori
               </option>
               {data.subKategori &&
